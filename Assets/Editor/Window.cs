@@ -15,4 +15,11 @@ public class Window : EditorWindow
         //EditorWindowsのタイトルを描画するために使用されるGUIContent。
         window.titleContent = new GUIContent("俺のウィンドウ");
     }
+
+    /// <summary> ウィンドウにテキスト表示 </summary>
+    private void OnGUI()
+    {
+        EditorGUILayout.BeginVertical("Box");
+        EditorGUILayout.LabelField("テキストおおおおおおおおおおおおおおおおおおお");
+    }
 }
