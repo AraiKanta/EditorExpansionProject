@@ -1,18 +1,18 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEditor;
 
-public class Window : MonoBehaviour
+/// <summary> ウィンドウを作成するクラス </summary>
+public class Window : EditorWindow
 {
-    // Start is called before the first frame update
-    void Start()
+    /// <summary> ウィンドウを表示する </summary>
+    [MenuItem("Window/Window to display text")] 　//ツールバーのWindow下に作成
+    static void Open()
     {
-        
-    }
+        var window = GetWindow<Window>();
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        //EditorWindowsのタイトルを描画するために使用されるGUIContent。
+        window.titleContent = new GUIContent("俺のウィンドウ");
     }
 }
