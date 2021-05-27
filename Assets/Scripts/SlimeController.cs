@@ -14,7 +14,12 @@ public class SlimeController : MonoBehaviour
 
    void ShowScriptableObject()
    {
-        Debug.Log("\n名前" + m_parameterData.enemyName + "\n体力" + m_parameterData.maxHp + "\n攻撃力" + m_parameterData.atk + 
-                  "\n防御力" + m_parameterData.def + "\n素早さ" + m_parameterData.agl + "\n経験値" + m_parameterData.exp + "\nゴールド" + m_parameterData.gold);
+        Debug.Log("\n名前" + m_parameterData.enemyName + 
+                  "\n体力" + m_parameterData.maxHp + 
+                  "\n攻撃力" + m_parameterData.atk + 
+                  "\n防御力" + m_parameterData.def + 
+                  "\n素早さ" + m_parameterData.agl + 
+                  "\n経験値" + m_parameterData.exp + 
+                  "\nゴールド" + m_parameterData.gold);
    }
 }
