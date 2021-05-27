@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32481fd69db8ba940bfc550d84ec152c, type: 3}
   m_Name: Parameter Data
   m_EditorClassIdentifier: 
-  enemyName: 
+  enemyName: "\u30B9\u30E9\u30A4\u30E0"
   maxHp: 0
   atk: 0
   def: 0
