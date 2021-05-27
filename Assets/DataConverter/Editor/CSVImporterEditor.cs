@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
 
-[CustomEditor(typeof(CSVImporter))]
+[CustomEditor(typeof(CsvImporter))]
 public class CSVImporterEditor : Editor
 {
     public override void OnInspectorGUI()
     {
-        var csvImpoter = target as CSVImporter;
+        var csvImpoter = target as CsvImporter;
 
         DrawDefaultInspector();
 
@@ -18,7 +18,7 @@ public class CSVImporterEditor : Editor
             //Debug.Log("敵データ作成");
         }
     }
-    void SetCsvDataToScriptableObject(CSVImporter csvImporter) 
+    void SetCsvDataToScriptableObject(CsvImporter csvImporter) 
     {
         // ボタンを押されたらパース実行
         if (csvImporter.csvFile == null)
