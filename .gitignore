@@ -59,3 +59,5 @@ sysinfo.txt
 crashlytics-build.properties
 
 Assets/Plugins/Demigiant/DOTween
+Assets/Plugins/UniTask/
+Assets/Plugins/UniRx/
