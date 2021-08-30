@@ -11,11 +11,18 @@ public class CsvText : MonoBehaviour
 {
     ///<summary>格納用の二次元は配列</summary>
     List<string[]> m_csvTexts = new List<string[]>();
+    /// <summary> テキストの変数 </summary>
     [SerializeField] Text m_testText = null;
+    /// <summary> csv </summary>
     TextAsset csvFile;
+    /// <summary>  </summary>
     private string m_textData = default;
+    /// <summary>  </summary>
     private string[] m_splitText = default;
-    private int currentNum = 0;
+    /// <summary> count用の変数 </summary>
+    private int m_currentNum = 0;
+
+
 
     void Start()
     {
@@ -53,7 +60,7 @@ public class CsvText : MonoBehaviour
 
         m_splitText = m_textData.Split(char.Parse("\n"));
 
-        m_testText.text = m_splitText[currentNum];
+        m_testText.text = m_splitText[m_currentNum];
 
         //デバッグ用
         for (var x = 0; x < m_csvTexts.Count; x++)
@@ -89,8 +96,8 @@ public class CsvText : MonoBehaviour
     public void OnClick()
     {
         // 数字を「０→１→２→０→１→２・・・」でループさせる方法（%；余り算の活用）
-        currentNum = (currentNum + 1) % m_splitText.Length;
+        m_currentNum = (m_currentNum + 1) % m_splitText.Length;
 
-        m_testText.text = m_splitText[currentNum]; 
+        m_testText.text = m_splitText[m_currentNum]; 
     }
 }
